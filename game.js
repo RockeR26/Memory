@@ -4,13 +4,11 @@ var colors=["red","yellow","green","blue"];
 var start=false;
 var level=0;
 $("#ru").click(function(){
-    $("#body").css("opacity",0.5);
-    $("#rules").css("opacity",1);
-    setTimeout(function(){
-        $("#body").css("opacity",1);
-        $("#rules").css("opacity",0); 
-    },7000);
-});
+    $("#rules").css("visibility","visible");
+    $("#close").click(function(){
+        $("#rules").css("visibility","collapse");
+    })
+}); 
 $('#start').click(function(){
     if(!start){
         nextSeq();
