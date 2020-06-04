@@ -24,12 +24,14 @@ footer{
   padding-right: 20px;
   visibility: collapse;
   padding-bottom: 20px;
+  text-align: left;
 }
 .rule{
   position:absolute;
-  left: 0px;
+  left:0px;
   top:10px;
   text-decoration: underline;
+  z-index: 1;
 }
 #ru{
   font-size: 1.5rem;
@@ -90,6 +92,9 @@ footer{
   background-color: grey;
 }
 #close{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 0.5rem;
+  margin-left: 4.5rem;
+  background-color: red;
+  color: whitesmoke;
 }

@@ -11,20 +11,23 @@ $("#ru").click(function(){
 }); 
 $('#start').click(function(){
     if(!start){
-        nextSeq();
+        setTimeout(function(){
+            nextSeq();
+        },300);
         start=true;
-        //setTimeout(function(){
-            
+       
     }
 });
 $(".btn").click(function(){
+    if (start===true){
     var userColor=$(this).attr("id");
     music(userColor);
     anime(userColor);
     userClickedPattern.push(userColor);
     check(userClickedPattern.length-1);
+    }
 });     
-        //},300);
+
     
 
 
@@ -48,7 +51,7 @@ function anime(color){
     $("#"+color).addClass("pressed")
     setTimeout(function(){
         $("#"+color).removeClass("pressed");  
-    },100)  
+    },150)  
 }
 
 function startOver(){
